@@ -36,5 +36,5 @@ const payment = sumProduct - discountValue;
 const cost = Math.floor(sumProduct)/2;
    console.log('Собівартість продуктів:'+ cost);
 
-const profit = cost-discount;
+const profit = cost-discountVaule;
    console.log('Чистий прибуток:' + profit);
