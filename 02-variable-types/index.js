@@ -17,7 +17,7 @@ while (M != userM || (N > M) || isNaN(M)) {
         : userM = prompt(`Число M не є цілим спробуйте ще раз`);
         M = parseInt(userM);
 }   
-console.log('Число M:  ' + userM);
+console.log('Число M:  ' + M);
 
 
 let agreePairValue = confirm('Пропускати парні числа?');
@@ -25,7 +25,7 @@ console.log('Пропускати парні?  ' + agreePairValue);
 
 
 let sumValue = 0;
-for (let i = userN; i <= userM; i++) {
+for (let i = N; i <= M; i++) {
     if (agreePairValue && i%2 === 0)  continue;
     sumValue += i; 
 }
