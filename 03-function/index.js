@@ -34,7 +34,7 @@ console.log('Your salary after tax:  ' + taxOfSalary(1000, 19.5));
 
 //5. Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад:
 function getRandomNumber(N, M) {
-    return Math.floor(Math.random()*M + N);
+    return Math.floor(Math.random() * (M - N + 1) + N);
 }
 console.log('Random value in the range of N to M: ' + getRandomNumber(1,10));
 
