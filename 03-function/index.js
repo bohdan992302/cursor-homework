@@ -15,7 +15,7 @@ function stepNumber(value,pow) {
         }
     return result;
 }
-console.log(`Number in pow is equal to: ` + stepNumber(3,3));
+console.log(`Number in pow is equal to: ` + stepNumber(2,13));
 
 // 3.Створити функцію, яка форматує ім'я, роблячи першу букву великою.
 function formatedName(name) {
@@ -59,7 +59,7 @@ function convertCurrency(money) {
     
     if(money.includes(`$`)){
         result = (parseInt(money) * rateOne) + `UAH`;
-        } else if (money.includes(`UAH`) || money.includes(`uah`) ){
+        } else if (money.toUpperCase().includes(`UAH`)){
             result = (parseInt(money) / rateTwo).toFixed(2) + `$`;
             } else {
                 result = `Enter the correct currency`;
@@ -114,3 +114,16 @@ function deleteDuplicateLetter(phrase) {
     return newPharse;
 }
 console.log('Dublicate symbols was deleted: ' + deleteDuplicateLetter("Бісквіт був дуже ніжним"));
+
+document.writeln (` Function №1 Max value index in this number is: ${getMaxDigit(1236) }<br>
+Function №2 Number in pow is equal to: ${stepNumber(2,13)}<br>
+Function №3 Name has been formated: ${formatedName('bOHdaN')}<br>
+Function №4 Your salary after tax: ${taxOfSalary(1000, 19.5)}<br>
+Function №5 Random value in the range of N to M: ${getRandomNumber(1,10)}<br>
+Function №6 This symbol repeated: ${countLetter('Асталавіста', 'а')}<br>
+Function №7 Convert from UAH to $: ${convertCurrency('2765uah')}<br>
+Function №8 Random password is: ${getRandomPassword(8)}<br>
+Function №9 Symbol (a) was deleted: ${deleteLetters("blablabla", 'a')}<br>
+Function №10 Is a polyndrome a word (Я несу гусеня): ${isPalyndrom("Я несу гусеня")}<br>
+Function №11 Dublicate symbols was deleted: ${deleteDuplicateLetter("Бісквіт був дуже ніжним")}
+`)
