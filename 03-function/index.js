@@ -72,13 +72,14 @@ console.log(`Convert another currency: ` + convertCurrency('253Ron'));
 
 //8.Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 function getRandomPassword (password){
+    const maxSymbols = 8;
     let randomPassword = "";
-    for (i = 0; i < password; i++) {
+    for (i = 0; i < maxSymbols; i++) {
         randomPassword += Math.floor(Math.random()*10);
     }
  return randomPassword;
 }
-console.log('Random password is: ' + getRandomPassword(8));
+console.log('Random password is: ' + getRandomPassword());
 
 //9. Створіть функцію, яка видаляє всі букви з речення. Приклад
 function deleteLetters(word, symbol) {
@@ -122,7 +123,7 @@ Function №4 Your salary after tax: ${taxOfSalary(1000, 19.5)}<br>
 Function №5 Random value in the range of N to M: ${getRandomNumber(1,10)}<br>
 Function №6 This symbol repeated: ${countLetter('Асталавіста', 'а')}<br>
 Function №7 Convert from UAH to $: ${convertCurrency('2765uah')}<br>
-Function №8 Random password is: ${getRandomPassword(8)}<br>
+Function №8 Random password is: ${getRandomPassword()}<br>
 Function №9 Symbol (a) was deleted: ${deleteLetters("blablabla", 'a')}<br>
 Function №10 Is a polyndrome a word (Я несу гусеня): ${isPalyndrom("Я несу гусеня")}<br>
 Function №11 Dublicate symbols was deleted: ${deleteDuplicateLetter("Бісквіт був дуже ніжним")}
